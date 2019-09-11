@@ -1,0 +1,4 @@
+landing->start
+phones->mens
+laptops->womans
+nmb->numberofprod

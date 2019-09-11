@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="section-top">
+        <img src="{% static 'img/1nb.jpg' %}" class="img-responsive">
+    </div>
+    <div class="section section1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Нові надходження
+                    </h1>
+
+
+
+
+                </div>
+                {% for product_image in products_images %}
+                    {% include 'start/product_item.html' %}
+
+
+
+
+
+
+                {% endfor %}
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section section2 mens-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Чоловічі кросівки
+                    </h1>
+                </div>
+                {% for product_image in products_images_mens %}
+                    {% include 'start/product_item.html' %}
+                {% endfor %}
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="section section3 womans-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Жіночі кросівки
+                    </h1>
+                </div>
+                {% for product_image in products_images_womans %}
+                    {% include 'start/product_item.html' %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+<script src="{% static 'js/scripts.js' %}"></script>
+
+{% endblock %}
